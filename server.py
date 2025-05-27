@@ -27,6 +27,9 @@ def emote_det():
     sadness = result['sadness']
     joy = result['joy']
     
+    if not dominant_emotion:
+        return "Invalid text! Please try again!"
+    
     return (
         f"For the given statement, the system response is: "
         f"'anger': {anger}, 'disgust': {disgust}, 'fear': {fear}, "
